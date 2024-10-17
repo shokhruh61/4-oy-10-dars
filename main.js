@@ -1,115 +1,295 @@
-// // 1. Length
+// // // // Sodda masalalar
+// // 1-MASALA JAVOBI
+let arr = [10, "BMW", 25, "Audi", 50, "Tesla", 4];
+alert(arr.length);
+// // 2-masala
+// let arr = 'Mercedes, Toyota, Chevrolet, Nissan, Ford';
+// let res = arr.length;
+// console.log(res);
+
+// // 3-masala
+// let arr = [10, 'BMW', 25, 'Audi', 5];
+// let res = arr[arr.length - 1];
+// console.log(res);
+
+// // // ### 2. Concat
 // // 1-masala
-// let array1 = [1, 2, 3, 4, 5];
-// console.log(array1.length); // 5
+// let arr1 = [10, "BMW", 25];
+// let arr2 = [50, "Audi", 75];
 
-// let text1 = "Hello, world!";
-// console.log(text1.length); // 12
+// let res = arr1.concat(arr2);
+// console.log(res);
 
-// let array2 = [10, 20, 30];
-// console.log(array2[array2.length - 1]); // 30
+// // 2-masala
+// let arr1 = ["Olma", "Toyota", "Qizil"];
+// let arr2 = ["Banan", "Honda", "Yashil"];
+// let arr3 = ["Anor", "Ford", "Moviy"];
+// let res = arr1.concat(arr2, arr3);
+// console.log(res);
 
-// // 2. Concat
-// let arr1 = [1, 2];
-// let arr2 = [3, 4];
-// let combined1 = arr1.concat(arr2);
-// console.log(combined1); // [1, 2, 3, 4]
+// // 3-masala
+// let arr1 = [10, "BMW", 25];
+// let arr2 = [50, "Audi", 75];
+// let res = arr1.concat(arr1);
+// let res1 = res.push(`Olcha`);
+// console.log(res1);
 
-// let str1 = "Hello";
-// let str2 = "World";
-// let str3 = "!";
-// let result1 = str1.concat(" ", str2, str3);
-// console.log(result1); // "Hello World!"
+// // // ### 3. Includes
+// // 1-masala
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 7];
+// console.log(arr.includes(5));
 
-// let combined2 = arr1.concat(arr2);
-// combined2.push(9);
-// console.log(combined2); // [1, 2, 3, 4, 9]
+// // 2-masala
+// let arr = ["Lorem ipsum dolor sit amet.", `Olma`, `Behi`, `Xurmo`];
+// console.log(arr.includes(`Olma`));
+// // 3-SAVOL JAVOBI
+// let arr = [5, 8, 2, 3, 7, 35, 2];
+// let res = false;
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] > 10) {
+//     res = true;
+//     break;
+//   }
+// }
+// console.log(res);
 
-// // 3. Includes
-// let arr3 = [1, 2, 3, 4];
-// console.log(arr3.includes(3)); // true
+// // // ### 4. IndexOf, LastIndexOf
+// // 1-masala
 
-// let text2 = "Hello world!";
-// console.log(text2.includes("world")); // true
+// let arr = [1, 2, 3, 4, 5, 6, 7, 10, 7];
+// console.log(arr.indexOf(7));
 
-// let arr4 = [2, 5, 12, 9];
-// let isGreaterThan10 = arr4.some((num) => num > 10);
-// console.log(isGreaterThan10); // true
+// // 2-masala
+// let arr = [1, 2, 3, 4, 5, 6, 7, 10, 7];
+// console.log(arr.lastIndexOf(7));
+// // 3-masala
+// let arr = ["Lorem", "Banana", "Ford", "Ipsum", "Apple", "Audi"];
+// let res = arr[1].indexOf("a");
+// let sum = arr[1].lastIndexOf("a");
+// console.log(res);
+// console.log(sum);
+// // // ### 5. Sort
 
-// // 4. IndexOf, LastIndexOf
-// let arr5 = [5, 3, 7, 3];
-// console.log(arr5.indexOf(3)); // 1
+// // 1-masala
 
-// console.log(arr5.lastIndexOf(3)); // 3
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// arr.sort(function (a, b) {
+//   return a - b;
+// });
+// console.log(arr);
 
-// let text3 = "hello world";
-// console.log(text3.indexOf("a")); // -1
-// console.log(text3.lastIndexOf("a")); // -1
+// // 2-SAVOL JAVOBI
 
-// // 5. Sort
-// let arr6 = [7, 3, 5, 1];
-// arr6.sort((a, b) => a - b);
-// console.log(arr6); // [1, 3, 5, 7]
+// let arr = ["Olma", "Banan", "Anor", "Nok", "Shaftoli"];
+// arr.sort();
+// console.log(arr);
 
-// let arr7 = ["apple", "banana", "cherry"];
-// arr7.sort();
-// console.log(arr7); // ["apple", "banana", "cherry"]
+// // 3-masala
 
-// arr6.sort((a, b) => b - a);
-// console.log(arr6); // [7, 5, 3, 1]
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// arr.sort(function (a, b) {
+//   return b - a;
+// });
+// console.log(arr);
 
-// // 6. Reverse
-// let arr8 = [1, 2, 3, 4];
-// arr8.reverse();
-// console.log(arr8); // [4, 3, 2, 1]
+// // // ### 6. Reverse
+// // 1-masala
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// arr = arr.reverse();
+// console.log(arr);
 
-// let text4 = "hello";
-// let reversed1 = text4.split("").reverse().join("");
-// console.log(reversed1); // "olleh"
+// // 2-masala
+// let arr = ["Olma", "Banan", "Anor", "Nok", "Shaftoli"];
+// let res = "";
 
-// let arr9 = [1, 2, 3, 4];
-// console.log(arr9.reverse()); // [4, 3, 2, 1]
+// for (let i = arr.length - 1; i >= 0; i--) {
+//   res += arr[i];
+// }
+// console.log(res);
 
-// // 7. ToString
-// let arr10 = [1, 2, 3];
-// console.log(arr10.toString()); // "1,2,3"
+// // 3-masala
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let res = arr.reverse();
+// console.log(res.join(" , "));
 
-// let arr11 = [10, 20, 30];
-// console.log(arr11.join(",")); // "10,20,30"
+// // // ### 7. ToString
+// // 1-masala
+// let arr = ["Olma", "Banan", "Anor", "Nok", "Shaftoli"];
+// let str = arr.toString();
+// console.log(str);
 
-// let numbers = [1, 2, 3, 4];
-// console.log(numbers.join()); // "1,2,3,4"
+// // 2-masala
+// let arr = ["Apple", "Banana", "Cherry"];
+// let res = arr.toString();
+// console.log(res);
 
-// // 8. Join
-// let arr12 = [1, 2, 3];
-// console.log(arr12.join("-")); // "1-2-3"
+// // 3-masala
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let res = arr.toString();
+// console.log(res);
 
-// let arr13 = ["apple", "banana", "cherry"];
-// console.log(arr13.join(" ")); // "apple banana cherry"
+// // // ### 8. Join
+// // 1-masala
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let res = arr.join("_")
+// console.log(res);
 
-// console.log(arr13.join("|")); // "apple|banana|cherry"
+// // 2-masala
+// let arr = ["Olma", "Banan", "Anor", "Nok", "Shaftoli"];
+// let res = arr.join(" ")
+// console.log(res);
 
-// // 9. Push, Shift
-// let arr14 = [1, 2];
-// arr14.push(3);
-// console.log(arr14); // [1, 2, 3]
+// // 3-masala
+// let arr = ["Olma", "Banan", "Anor", "Nok", "Shaftoli"];
+// let res = arr.join("|")
+// console.log(res);
 
-// arr14.shift();
-// console.log(arr14); // [2, 3]
+// // // ### 9. Push, Shift
+// // 1-masala
+// let arr = ["Olma", "Banan", "Anor", "Nok", "Shaftoli"];
+// arr.push("Behi")
+// console.log(arr);
 
-// arr14.push(4);
-// arr14.shift();
-// console.log(arr14); // [3, 4]
+// // 2-masala
+// let arr = ["Olma", "Banan", "Anor", "Nok", "Shaftoli"];
+// arr.shift()
+// console.log(arr);
 
-// // 10. Unshift, Pop
-// let arr15 = [2, 3];
-// arr15.unshift(1);
-// console.log(arr15); // [1, 2, 3]
+// // 3-masala
+// let arr = ["Olma", "Banan", "Anor", "Nok", "Shaftoli"];
+// arr.push("Behi", "Olcha", "Uzum")
+// arr.shift()
+// console.log(arr);
 
-// arr15.pop();
-// console.log(arr15); // [1, 2]
+// // // ### 10. Unshift, Pop
 
-// arr15.push(4);
-// arr15.unshift(0);
-// arr15.pop();
-// console.log(arr15); // [0, 1, 2]
+// // 1-masala
+
+// let arr = ["Olma", "Banan", "Anor", "Nok", "Shaftoli"];
+// arr.unshift("Behi");
+// console.log(arr);
+
+// // 2-masala
+
+// let arr = ["Olma", "Banan", "Anor", "Nok", "Shaftoli"];
+// arr.pop();
+// console.log(arr);
+
+// // 3-masala
+// let arr = ["Olma", "Banan", "Anor", "Nok", "Shaftoli"];
+// arr.unshift("Behi", "Gilos", "Xurmo");
+// arr.pop();
+// arr.pop();
+// console.log(arr);
+
+// // // // Qiyinroq masalalar
+// // 1-masala
+
+// let arr = [1, 2, 3, 4, 5];
+// if (arr.length % 2 !== 0) {
+//   let res1 = Math.floor(arr.length / 2);
+//   arr.splice(res1, 1);
+//   console.log(arr);
+// } else {
+//   let res2 = arr.length / 2;
+//   let sum1 = arr.slice(0, res2);
+//   let sum2 = arr.slice(res2);
+//   console.log(sum1);
+//   console.log(sum2);
+// }
+
+// // 2-masala
+
+// let arr1 = [12341, "Pagani", 343, "Banan"];
+// let arr2 = [4213, "Olcha", 6123, "Maymun"];
+// let count = arr1.concat(arr2);
+// let res = [];
+
+// for (let i = 0; i < count.length; i++) {
+//   if (typeof count[i] == "number") {
+//     res.push(count[i]);
+//   }
+// }
+// console.log(res);
+
+// // 3-masala
+
+// let arr1 = [1, 2, 3, 4, 5];
+// let arr2 = 3;
+// let res = 6;
+// let sum = arr1.indexOf(arr2);
+// if (sum !== -1) {
+//   arr1.splice(sum, 1);
+// } else {
+//   arr1.push(res);
+// }
+// console.log(arr1);
+
+// // 4-masala
+
+// let arr = [1, 2, 3, 4, 5, 3, 6];
+// let res = 3;
+// let sum1 = arr.indexOf(res);
+// let sum2 = arr.lastIndexOf(res);
+// let last_arr = arr.slice(sum1, sum2 + 1);
+// console.log(last_arr);
+
+// // 5-masala
+
+// let arr = [53, "Apple", 252, "Banana", 352, "Cherry"];
+// let num = [];
+// let writ = [];
+// for (let i = 0; i < arr.length; i++) {
+//   if (typeof arr[i] == "number") {
+//     num.push(arr[i]);
+//   } else if (typeof arr[i] == "string") {
+//     writ.push(arr[i]);
+//   }
+// }
+// num.sort((a, b) => a - b);
+// writ.reverse();
+// let sum = num.concat(writ);
+// console.log(sum);
+
+// // // 6-SAVOL JAVOBI
+
+// let arr = [1, 2, 3, 4, 5];
+// let sum = [];
+// for (let i = 0; i < arr.length; i++) {
+//   sum.push(arr[i] * 2);
+// }
+// let res = sum.join(" , ");
+// console.log(res);
+
+// // 7-masala
+
+// let arr1 = ["olma", "Pagani", "Toyota"];
+// let arr2 = ["Chevrolet", "Mersedes", 1];
+// let arr3 = ["Kia", "anor", 2];
+// let sum = arr1.concat(arr2, arr3);
+// let res = sum.join("-").toUpperCase();
+// console.log(res);
+
+// // 8-masala
+
+// let arr = ["olma", "banan", "Toyota", "Hyundai", "mango", "Kia", "anor"];
+// arr.shift();
+// arr.pop();
+// let res = arr.join(":");
+// console.log(res);
+
+// // 9-masala
+// let arr = ["olma", "banan", "Toyota", "Hyundai", "mango"];
+// arr.unshift("anor");
+// arr.push("Kia");
+// arr.sort();
+// let res = arr.slice(-3);
+// console.log(res);
+
+// // 10-masala
+// let arr = ["olma","banan",1,2,3,4,5,"Toyota","Hyundai","mango","anor","Kia",];
+// arr.reverse();
+// arr.splice(0, 2);
+// arr.splice(-3, 3);
+// arr.sort();
+// console.log(arr);
